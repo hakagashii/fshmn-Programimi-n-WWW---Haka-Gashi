@@ -1,0 +1,19 @@
+/*
+ * VERSIONI I RIPARUAR I gabime.css
+ * Problemi 1: #poster (ID) kishte specifikë më të lartë se .poster (klasë),
+ * ndaj color: white fitonte mbi color: #17263c dhe nuk lexohej në sfond të bardhë.
+ * Problemi 2: width: 700px + padding: 80px shkaktonte tejkalim në celular.
+ * Zgjidhja: të dy selektorët nuk vendosin më vlera kontradiktore;
+ * box-sizing: border-box, max-width dhe padding fleksibël shmangin overflow.
+ * Ky skedar është për demonstrim; stili kryesor është style.css.
+ */
+#poster {
+  color: #17263c;
+  background: #ffffff;
+}
+.poster {
+  width: 100%;
+  max-width: 672px;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  box-sizing: border-box;
+}
