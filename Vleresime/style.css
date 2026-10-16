@@ -1,0 +1,23 @@
+* { box-sizing: border-box; }
+body { font-family: system-ui, sans-serif; margin: 1rem; }
+.resources {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px solid navy;
+  white-space: normal;
+  min-width: 0;
+}
+.resources article {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid navy;
+  overflow-wrap: anywhere;
+}
+.resources article h2, .resources article p, .resources article a { display: block; }
+a:focus-visible { outline: 3px solid navy; outline-offset: 3px; }
+@media (min-width: 700px) {
+  .resources { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .resources article:first-child { grid-column: 1 / -1; }
+}
