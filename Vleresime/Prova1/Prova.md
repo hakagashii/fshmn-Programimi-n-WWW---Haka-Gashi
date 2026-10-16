@@ -1,11 +1,11 @@
-# Testet — Varianti D
+# Testet - Gr.4
 
-Plotëso pasi ta testosh faqen.
-
-| Testi | Pritja | Rezultati real |
+| Testi | Pritja | Rezultati nga kontrolli i kodit |
 |---|---|---|
-| 360 px | Tri burime njëra poshtë tjetrës; secili ka titullin, llojin dhe lidhjen në rreshta të veçantë. Pa scroll horizontal. |  | W
-| 1000 px | Burimi i parë shtrihet në gjithë rreshtin e parë; dy burimet e tjera ndajnë rreshtin e dytë në dy kolona të barabarta. |  | W 
-| Menuja dhe Më shumë | ID-të ekzistojnë dhe lidhjet arrijnë te seksioni përkatës |  | W
-| Tab / Enter | Fokusi shihet, lidhja aktivizohet |  | W
-| Tekst i gjatë te paragrafi i parë | Teksti thyhet brenda kutisë, pa scroll horizontal në 360 px |  | W 
+| 360 px | Tri burime njera poshte tjetres, pa scroll horizontal | CSS ka nje kolone; permbajtja lejohet me u thy ne rreshta. | W
+| 1000 px | I pari ne krejt rreshtin, dy tjeret nga gjysma | Media query krijon 2 kolona dhe article i pare shtrihet ne te dyjat. |W
+| Menuja dhe Me shume | Linkat shkojne te ID e sakta | `#burimet` dhe `#ndihma` ekzistojne ne HTML. | W
+| Tab / Enter | Fokusi shihet dhe linkat aktivizohen | W`:focus-visible` ka outline; linkat jane elemente `a` me href. |
+| Tekst i gjate | Qendron brenda kutise | `white-space: normal` dhe `overflow-wrap: anywhere` e thyejne tekstin. |W
+
+Shenim: Kontrolli eshte bere ne kod. Provoje edhe ne browser me DevTools ne 360px dhe 1000px para dorezimit.
