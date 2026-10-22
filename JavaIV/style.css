@@ -1,0 +1,136 @@
+/* 1. Llogarit padding dhe border brenda gjeresise se elementit. */
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: #172033;
+  background: #f4f7fb;
+}
+/* 2. Kufizo gjeresine ne desktop, por ruaj hapesire ne telefon. */
+.container {
+  width: min(100% - 2rem, 1100px);
+  margin-inline: auto;
+}
+.site-header {
+  padding: 2.5rem 0;
+  background: #152a50;
+  color: white;
+}
+.site-header h1 {
+  margin: 0.2rem 0;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+}
+/* 3. Flexbox: menu ne nje dimension, me kalim ne rresht tjeter. */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  list-style: none;
+}
+.menu a {
+  display: inline-block;
+  padding: 0.6rem 0.9rem;
+  color: white;
+  border: 1px solid #9eb5dc;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+.menu a:hover {
+  background: #294978;
+}
+a:focus-visible {
+  outline: 3px solid #ffba49;
+  outline-offset: 3px;
+}
+.skip {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 10;
+  background: white;
+  color: #152a50;
+  padding: 0.7rem;
+}
+.skip:focus {
+  top: 1rem;
+}
+main {
+  padding-block: 2rem;
+}
+/* 4. Grid mobile-first: nje kolone si parazgjedhje. */
+.activities {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+.card {
+  min-width: 0;
+  overflow: hidden;
+  background: white;
+  border: 1px solid #dbe3ed;
+  border-radius: 1rem;
+  box-shadow: 0 5px 18px #182f4d0c;
+}
+.card img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.card-content {
+  padding: 1.2rem;
+  min-width: 0;
+}
+.category {
+  color: #245f9c;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.card h3 {
+  margin: 0.5rem 0;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+.time {
+  color: #475569;
+}
+.card a {
+  color: #1454a1;
+  font-weight: 700;
+}
+.info {
+  margin-top: 2rem;
+}
+.site-footer {
+  padding: 1.5rem;
+  text-align: center;
+  background: #e5ecf5;
+}
+/* 5. Tablet: dy kolona nga 600px. */
+@media (min-width: 600px) {
+  .activities {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+/* 6. Desktop: tri kolona nga 900px. */
+@media (min-width: 900px) {
+  .activities {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
