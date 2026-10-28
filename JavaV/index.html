@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Demonstrim mesimor i regjistrimit per misionin sekret.">
+  <title>Regjistro misionin | Java V</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Kalo te permbajtja</a>
+  <main id="main" class="container">
+    <header class="page-header">
+      <span class="eyebrow">JAVA V / MISIONI SEKRET</span>
+      <h1>Regjistro misionin</h1>
+      <p class="intro">Demonstrim lokal: perdor vetem te dhena te sajuara. Nuk kryhet regjistrim real.</p>
+    </header>
+
+    <section class="panel" aria-labelledby="form-title">
+      <div class="section-heading">
+        <div><span class="section-number">01 / REGJISTRIMI</span><h2 id="form-title">Te dhenat e misionit</h2></div>
+        <span class="status"><span class="status-dot"></span> Demo lokale</span>
+      </div>
+      <form action="pranuar.html" method="get">
+        <div class="field-grid">
+          <div class="field">
+            <label for="pseudonimi">Pseudonimi <span class="required" aria-hidden="true">*</span></label>
+            <input id="pseudonimi" name="pseudonimi" type="text" minlength="3" maxlength="20" placeholder="p.sh. Agjenti07" autocomplete="off" required>
+            <small>3–20 karaktere</small>
+          </div>
+          <div class="field">
+            <label for="email">Email i sajuar <span class="required" aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" placeholder="student@example.org" autocomplete="off" required>
+            <small>Perdor nje adrese demonstrimi</small>
+          </div>
+          <div class="field">
+            <label for="persona">Numri i personave <span class="required" aria-hidden="true">*</span></label>
+            <input id="persona" name="persona" type="number" min="1" max="5" step="1" placeholder="1–5" required>
+            <small>Minimum 1, maksimum 5 persona</small>
+          </div>
+        </div>
+
+        <fieldset class="category">
+          <legend>Kategoria e misionit <span class="required" aria-hidden="true">*</span></legend>
+          <div class="choice-row">
+            <label class="choice"><input type="radio" name="kategoria" value="Art" required> <span>Art</span></label>
+            <label class="choice"><input type="radio" name="kategoria" value="Shkence" required> <span>Shkence</span></label>
+          </div>
+        </fieldset>
+        <label class="terms"><input type="checkbox" name="rregullat" value="pranuar" required> <span>I pranoj rregullat e demonstrimit dhe do te perdor vetem te dhena te sajuara. <span class="required" aria-hidden="true">*</span></span></label>
+        <div class="actions"><button type="submit">Kontrollo formularin <span aria-hidden="true">→</span></button><span class="action-note">* Fusha te detyrueshme</span></div>
+      </form>
+    </section>
+
+    <section class="schedule" aria-labelledby="schedule-title">
+      <div class="section-heading"><div><span class="section-number">02 / ORARI</span><h2 id="schedule-title">Oraret e misioneve</h2></div></div>
+      <div class="table-scroll">
+        <table>
+          <caption>Tri misionet e planifikuara ne kampus</caption>
+          <thead><tr><th scope="col">Ora</th><th scope="col">Misioni</th><th scope="col">Vendi</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><time datetime="10:00">10:00</time></th><td>Gjej shenjen</td><td>Oborri</td></tr>
+            <tr><th scope="row"><time datetime="12:00">12:00</time></th><td>Lexo harten</td><td>Biblioteka</td></tr>
+            <tr><th scope="row"><time datetime="14:00">14:00</time></th><td>Zbulo objektin</td><td>Laboratori</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <footer>Projekt mesimor · Vetem front-end · Asnje regjistrim nuk ruhet ne server</footer>
+  </main>
+</body>
+</html>
